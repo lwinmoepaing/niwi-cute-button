@@ -1,0 +1,14 @@
+{
+  "exclude": ["node_modules"],
+  "extends": "@niw!/ts-config/nextjs.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["src", "next-env.d.ts", ".next/types/**/*.ts"]
+}
