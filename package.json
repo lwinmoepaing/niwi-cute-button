@@ -10,7 +10,7 @@
 
     "add:core": "pnpm add -filter='@niwl/cute-button'",
     "remove:core": "pnpm remove -filter='@niwl/cute-button'",
-    "dev:core": "turbo dev --filter='@niwl/cute-button'",
+    "dev:core": "turbo dev --filter='@niwl/cute-button' --filter='@niwl/plain-playground' --filter='@niwl/cute-button-css'",
     "lint:core": "turbo lint --filter='@niwl/cute-button'",
     "build:core": "turbo build --filter='@niwl/cute-button'",
     

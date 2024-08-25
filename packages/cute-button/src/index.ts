@@ -1,4 +1,4 @@
-export class MyButton {
+export class Button {
   private element: HTMLElement;
 
   constructor(element: HTMLElement) {

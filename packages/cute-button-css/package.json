@@ -2,6 +2,9 @@
   "name": "@niwl/cute-button-css",
   "version": "0.0.0",
   "main": "dist/main.min.css",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "stylelint './src/**/*.scss'",
     "compress": "sass src/main.scss:dist/main.min.css --source-map --style compressed",

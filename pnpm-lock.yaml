@@ -76,8 +76,30 @@ importers:
         specifier: ^5.3.3
         version: 5.5.4
 
+  apps/plain-playground:
+    dependencies:
+      '@niwl/cute-button':
+        specifier: workspace:*
+        version: link:../../packages/cute-button
+      '@niwl/cute-button-css':
+        specifier: workspace:*
+        version: link:../../packages/cute-button-css
+    devDependencies:
+      typescript:
+        specifier: ^5.5.3
+        version: 5.5.4
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.2(@types/node@20.16.1)(sass@1.77.8)
+
   apps/react-playground:
     dependencies:
+      '@niwl/cute-button-css':
+        specifier: workspace:*
+        version: link:../../packages/cute-button-css
+      '@niwl/cute-button-react':
+        specifier: workspace:*
+        version: link:../../packages/cute-button-react
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -88,12 +110,6 @@ importers:
       '@eslint/js':
         specifier: ^9.9.0
         version: 9.9.1
-      '@niwl/cute-button-css':
-        specifier: workspace:*
-        version: link:../../packages/cute-button-css
-      '@niwl/cute-button-react':
-        specifier: workspace:*
-        version: link:../../packages/cute-button-react
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.4
