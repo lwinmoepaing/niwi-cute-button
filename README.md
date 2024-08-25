@@ -17,9 +17,9 @@ This Turborepo includes the following:
 ### Apps and Packages
 
 - `docs`: A placeholder documentation site powered by [Next.js](https://nextjs.org/)
-- `@niw!/core`: core React components
-- `@niw!/tsconfig`: shared `tsconfig.json`s used throughout the monorepo
-- `@niw!/eslint-config`: ESLint preset
+- `@niwl/core`: core React components
+- `@niwl/tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `@niwl/eslint-config`: ESLint preset
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 

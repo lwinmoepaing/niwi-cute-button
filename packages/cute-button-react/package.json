@@ -1,5 +1,5 @@
 {
-  "name": "@niw!/cute-button-react",
+  "name": "@niwl/cute-button-react",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -16,8 +16,8 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@niw!/ts-config": "workspace:*",
-    "@niw!/eslint-config": "workspace:*",
+    "@niwl/ts-config": "workspace:*",
+    "@niwl/eslint-config": "workspace:*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",

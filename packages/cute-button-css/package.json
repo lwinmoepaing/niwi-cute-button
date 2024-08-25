@@ -1,0 +1,28 @@
+{
+  "name": "@niwl/cute-button-css",
+  "version": "0.0.0",
+  "main": "dist/main.min.css",
+  "scripts": {
+    "lint": "stylelint './src/**/*.scss'",
+    "compress": "sass src/main.scss:dist/main.min.css --source-map --style compressed",
+    "expanded": "sass src/main.scss:dist/main.css --source-map --style expanded",
+    "build": "concurrently \"pnpm compress\" \"pnpm expanded\"",
+    "dev": "concurrently \"pnpm compress --watch\" \"pnpm expanded --watch\"",
+    "clear": "rimraf dist",
+    "postinstall": "pnpm build"
+  },
+  "lint-staged": {
+    "*.scss": "pnpm lint:fix"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "lint-staged": "^15.2.9",
+    "rimraf": "^6.0.1",
+    "sass": "^1.77.8",
+    "stylelint": "^16.8.2",
+    "stylelint-prettier": "^5.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

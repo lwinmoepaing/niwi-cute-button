@@ -1,5 +1,5 @@
 {
-  "name": "@niw!/docs",
+  "name": "@niwl/docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -15,12 +15,17 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@niw!/ts-config": "workspace:*",
+    "@niwl/cute-button-react": "workspace:*",
+    "@niwl/cute-button-css": "workspace:*",
+    "@niwl/ts-config": "workspace:*",
+    "@niwl/eslint-config": "workspace:*",
     "@next/eslint-plugin-next": "^14.1.1",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "@niw!/eslint-config": "workspace:*",
     "typescript": "^5.3.3"
+  }, 
+  "publishConfig": {
+    "access": "restricted"
   }
 }

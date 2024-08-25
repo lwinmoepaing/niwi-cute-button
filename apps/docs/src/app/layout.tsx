@@ -1,3 +1,5 @@
+import "@niwl/cute-button-css/dist/main.min.css";
+
 export default function RootLayout({
   children,
 }: {

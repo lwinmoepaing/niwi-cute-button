@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules"],
-  "extends": "@niw!/ts-config/nextjs.json",
+  "extends": "@niwl/ts-config/nextjs.json",
   "compilerOptions": {
     "outDir": "dist",
     "incremental": true,

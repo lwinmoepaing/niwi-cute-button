@@ -1,14 +1,35 @@
 {
-  "name": "@niw!/cute-button",
+  "name": "@niwl/cute-button",
   "private": true,
   "scripts": {
     "commit": "cz",
     "build": "turbo build",
     "dev": "turbo dev",
-    "dev:core": "turbo dev --filter='@niw!/cute-button'",
-    "lint:core": "turbo lint --filter='@niw!/cute-button'",
-    "build:core": "turbo build --filter='@niw!/cute-button'",
-    "dev:react": "turbo dev --filter='@niw!/cute-button-react' --filter='@niw!/docs'",
+    "lint-stage": "turbo lint-stage",
+    "clear:modules": "npx npkill",
+
+    "add:core": "pnpm add -filter='@niwl/cute-button'",
+    "remove:core": "pnpm remove -filter='@niwl/cute-button'",
+    "dev:core": "turbo dev --filter='@niwl/cute-button'",
+    "lint:core": "turbo lint --filter='@niwl/cute-button'",
+    "build:core": "turbo build --filter='@niwl/cute-button'",
+    
+    "add:react": "pnpm add -filter='@niwl/cute-button-react'",
+    "remove:react": "pnpm remove -filter='@niwl/cute-button-react'",
+    "dev:react": "turbo dev --filter='@niwl/cute-button-react' --filter='@niwl/react-playground' --filter='@niwl/cute-button-css'",
+    "lint:react": "turbo lint --filter='@niwl/cute-button-react'",
+    "build:react": "turbo build --filter='@niwl/cute-button-react'",
+
+    "add:react-playground": "pnpm add -filter='@niwl/react-playground'",
+    "remove:react-playground": "pnpm remove -filter='@niwl/react-playground'",
+    "dev:react-playground": "turbo dev --filter='@niwl/react-playground'",
+    
+    "add:css": "pnpm add -filter='@niwl/cute-button-css'",
+    "remove:css": "pnpm remove -filter='@niwl/cute-button-css'",
+    "dev:css": "turbo dev --filter='@niwl/cute-button-css'",
+    "lint:css": "turbo lint --filter='@niwl/cute-button-css'",
+    "build:css": "turbo build --filter='@niwl/cute-button-css'",
+    
     "lint": "turbo lint",
     "clean": "turbo clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
