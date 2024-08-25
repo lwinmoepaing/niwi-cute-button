@@ -1,5 +1,5 @@
 {
-  "name": "@niwl/react-playground",
+  "name": "@niwi-ui/react-playground",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,8 +11,8 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@niwl/cute-button-react": "workspace:*",
-    "@niwl/cute-button-css": "workspace:*"
+    "@niwi-ui/cute-button-react": "workspace:*",
+    "@niwi-ui/cute-button-css": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

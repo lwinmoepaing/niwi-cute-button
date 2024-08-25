@@ -1,4 +1,4 @@
-import { Button } from "@niwl/cute-button-react";
+import { Button } from "@niwi-ui/cute-button-react";
 
 function App() {
   return (

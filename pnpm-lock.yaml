@@ -51,16 +51,16 @@ importers:
       '@next/eslint-plugin-next':
         specifier: ^14.1.1
         version: 14.2.6
-      '@niwl/cute-button-css':
+      '@niwi-ui/cute-button-css':
         specifier: workspace:*
         version: link:../../packages/cute-button-css
-      '@niwl/cute-button-react':
+      '@niwi-ui/cute-button-react':
         specifier: workspace:*
         version: link:../../packages/cute-button-react
-      '@niwl/eslint-config':
+      '@niwi-ui/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@niwl/ts-config':
+      '@niwi-ui/ts-config':
         specifier: workspace:*
         version: link:../../packages/ts-config
       '@types/node':
@@ -78,10 +78,10 @@ importers:
 
   apps/plain-playground:
     dependencies:
-      '@niwl/cute-button':
+      '@niwi-ui/cute-button':
         specifier: workspace:*
         version: link:../../packages/cute-button
-      '@niwl/cute-button-css':
+      '@niwi-ui/cute-button-css':
         specifier: workspace:*
         version: link:../../packages/cute-button-css
     devDependencies:
@@ -94,10 +94,10 @@ importers:
 
   apps/react-playground:
     dependencies:
-      '@niwl/cute-button-css':
+      '@niwi-ui/cute-button-css':
         specifier: workspace:*
         version: link:../../packages/cute-button-css
-      '@niwl/cute-button-react':
+      '@niwi-ui/cute-button-react':
         specifier: workspace:*
         version: link:../../packages/cute-button-react
       react:
@@ -143,10 +143,10 @@ importers:
 
   packages/cute-button:
     devDependencies:
-      '@niwl/eslint-config':
+      '@niwi-ui/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@niwl/ts-config':
+      '@niwi-ui/ts-config':
         specifier: workspace:*
         version: link:../ts-config
       eslint:
@@ -186,10 +186,10 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1
     devDependencies:
-      '@niwl/eslint-config':
+      '@niwi-ui/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@niwl/ts-config':
+      '@niwi-ui/ts-config':
         specifier: workspace:*
         version: link:../ts-config
       '@types/react':

@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules"],
-  "extends": "@niwl/ts-config/nextjs.json",
+  "extends": "@niwi-ui/ts-config/nextjs.json",
   "compilerOptions": {
     "outDir": "dist",
     "incremental": true,

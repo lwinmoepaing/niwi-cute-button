@@ -6,5 +6,5 @@
   "linked": [],
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["@niwl/docs"]
+  "ignore": ["@niwi-ui/docs"]
 }

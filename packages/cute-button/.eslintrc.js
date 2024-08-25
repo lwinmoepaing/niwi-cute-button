@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ["@niwl/eslint-config/library.js"],
+  extends: ["@niwi-ui/eslint-config/library.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,

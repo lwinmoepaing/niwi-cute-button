@@ -1,5 +1,5 @@
-import { Button } from "@niwl/cute-button";
-import "@niwl/cute-button-css/dist/main.css";
+import { Button } from "@niwi-ui/cute-button";
+import "@niwi-ui/cute-button-css/dist/main.css";
 import "./style.css";
 
 const appConainer = document.querySelector<HTMLDivElement>("#app")!;

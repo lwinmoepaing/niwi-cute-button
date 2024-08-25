@@ -1,4 +1,4 @@
-import "@niwl/cute-button-css/dist/main.min.css";
+import "@niwi-ui/cute-button-css/dist/main.min.css";
 
 export default function RootLayout({
   children,

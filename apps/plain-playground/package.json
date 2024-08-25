@@ -1,5 +1,5 @@
 {
-  "name": "@niwl/plain-playground",
+  "name": "@niwi-ui/plain-playground",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@niwl/cute-button": "workspace:*",
-    "@niwl/cute-button-css": "workspace:*"
+    "@niwi-ui/cute-button": "workspace:*",
+    "@niwi-ui/cute-button-css": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.5.3",

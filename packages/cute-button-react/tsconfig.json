@@ -1,5 +1,5 @@
 {
-  "extends": "@niwl/ts-config/react-library.json",
+  "extends": "@niwi-ui/ts-config/react-library.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
