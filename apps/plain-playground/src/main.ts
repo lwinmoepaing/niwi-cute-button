@@ -1,4 +1,4 @@
-import { Button } from "@niwi-ui/cute-button";
+import { NiwiCuteButton } from "@niwi-ui/cute-button";
 import "@niwi-ui/cute-button-css/dist/main.css";
 import "./style.css";
 
@@ -6,10 +6,8 @@ const appConainer = document.querySelector<HTMLDivElement>("#app")!;
 
 appConainer.innerHTML = `
   <div class="my-10 bg-[#dfdfdf] rounded-lg max-w-[500px] mx-auto p-[20px]">
-    <button class="niwi-cute-button">Hello</button>
+    <button class="niwi-cute-button">Hover Me</button>
   </div>
 `;
 
-const buttons = new Button(document.querySelector(".niwi-cute-button")!);
-
-console.log(buttons);
+new NiwiCuteButton(document.querySelector(".niwi-cute-button")!);

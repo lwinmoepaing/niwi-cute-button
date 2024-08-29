@@ -1,5 +1,20 @@
-$primary-color: #3498db;
+/**
+ * =============================
+ * Button
+ * =============================
+ */
+@import "./button.scss";
 
-.niwi-cute-button {
-  background-color: $primary-color;
-}
+/**
+ * =============================
+ * Animations
+ * =============================
+ */
+@import "./animation.scss";
+
+/**
+ * =============================
+ * Characters
+ * =============================
+ */
+@import "./characters/dog.scss";

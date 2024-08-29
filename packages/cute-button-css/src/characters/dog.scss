@@ -1,0 +1,19 @@
+.niwi-cb-dog-svg {
+  transform-origin: 50% 50%;
+
+  .niwi-cb-dog-head {
+    transform-origin: 50% 50%;
+    transform: scale(0.97);
+    animation: niwi-cb-dog-head-animate 0.6s ease-in-out both alternate infinite;
+  }
+}
+
+@keyframes niwi-cb-dog-head-animate {
+  0% {
+    transform: scale(0.97) rotate(0deg);
+  }
+
+  100% {
+    transform: scale(0.97) rotate(7deg);
+  }
+}

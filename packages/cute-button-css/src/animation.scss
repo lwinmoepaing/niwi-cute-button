@@ -1,0 +1,138 @@
+.niwi-cb-animation {
+  position: relative;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .left-hand {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transform: translateX(0%);
+    transform-origin: left;
+
+    &.frontHandActive {
+      opacity: 1;
+      transform: translateX(-70%);
+    }
+
+    &.backHandActive {
+      z-index: 1;
+      transform: translateX(-20%);
+
+      .frontHand {
+        transition: all 0.12s ease-out;
+        opacity: 0.5;
+        transform: scale(0);
+      }
+
+      .backHand {
+        transition: all 0.12s ease-in;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    &.finishedAnimation {
+      opacity: 1;
+      z-index: 1;
+
+      .frontHand {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      .backHand {
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        transform: scale(0) translateX(-44%);
+      }
+    }
+
+    .frontHand {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .backHand {
+      opacity: 1;
+      transform: scale(0.4);
+    }
+  }
+
+  .right-hand {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transform: translateX(-100%) scaleX(-1);
+    transform-origin: right;
+
+    &.frontHandActive {
+      opacity: 1;
+      transform: translateX(-20%) scaleX(-1);
+    }
+
+    &.backHandActive {
+      z-index: 1;
+      transform: translateX(-80%) scaleX(-1);
+
+      .frontHand {
+        transition: all 0.12s ease-out;
+        opacity: 0.5;
+        transform: scale(0);
+      }
+
+      .backHand {
+        transition: all 0.12s ease-in;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    &.finishedAnimation {
+      opacity: 1;
+      z-index: 1;
+
+      .frontHand {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      .backHand {
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        transform: scale(0) translateX(44%);
+      }
+    }
+
+    .frontHand {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .backHand {
+      opacity: 1;
+      transform: scale(0.4);
+    }
+  }
+
+  .center {
+    position: absolute;
+    left: 50%;
+    transform-origin: center;
+    transform: translateX(-50%);
+
+    &.bodyActive {
+      transform: translateX(-50%) translateY(-86%);
+    }
+
+    &.finishedAnimation {
+      transform: translateX(-50%) translateY(0%);
+    }
+  }
+}
