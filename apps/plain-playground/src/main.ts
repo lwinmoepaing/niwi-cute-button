@@ -5,9 +5,13 @@ import "./style.css";
 const appConainer = document.querySelector<HTMLDivElement>("#app")!;
 
 appConainer.innerHTML = `
-  <div class="my-10 bg-[#dfdfdf] rounded-lg max-w-[500px] mx-auto p-[20px]">
-    <button class="niwi-cute-button">Hover Me</button>
+ <main class="h-screen flex justify-center items-center">
+  <div class=" bg-[#f3f3f3] rounded-lg max-w-[600px] mx-auto p-[20px] flex flex-row gap-x-[70px]">
+    <button class="dog">Hover Me</button>
+    <button class="frog">Hover Me</button>
   </div>
+ </main>
 `;
 
-new NiwiCuteButton(document.querySelector(".niwi-cute-button")!);
+new NiwiCuteButton(document.querySelector(".dog")!);
+new NiwiCuteButton(document.querySelector(".frog")!, { characterType: "frog" });

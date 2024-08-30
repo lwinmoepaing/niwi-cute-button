@@ -1,9 +1,10 @@
 import characters, { CharacterType } from "./characters";
 
-export type NiwiCuteButtonOptions = {
+export type NiwiCuteButtonOptions = Partial<{
   handAnimateDuration: number;
   handShakeAnimationDuration: number;
   bodyAnimationDuration: number;
+}> & {
   characterType: CharacterType;
 };
 
@@ -11,18 +12,16 @@ const defaultOptions = {
   handAnimateDuration: 500,
   handShakeAnimationDuration: 300,
   bodyAnimationDuration: 800,
-  characterType: "dog",
+  characterType: "dog" as CharacterType,
 } as const;
+
 export class NiwiCuteButton {
   private element: HTMLElement;
   private options: NiwiCuteButtonOptions;
 
-  constructor(
-    element: HTMLElement,
-    options: NiwiCuteButtonOptions = defaultOptions
-  ) {
+  constructor(element: HTMLElement, options?: NiwiCuteButtonOptions) {
     this.element = element;
-    this.options = options;
+    this.options = { ...defaultOptions, ...options };
 
     this.addContainerClass();
     this.setContent();
@@ -116,7 +115,7 @@ export class NiwiCuteButton {
       element.classList.contains("frontHandActive") ||
       element.classList.contains("backHandActive") ||
       element.classList.contains("bodyActive") ||
-      element.classList.contains("finishedAnimation") // ||
+      element.classList.contains("finishedAnimation")
     );
   }
 
@@ -130,7 +129,10 @@ export class NiwiCuteButton {
   }
 
   private async handAnimation({ side }: { side: "left" | "right" | "middle" }) {
-    const { handAnimateDuration, handShakeAnimationDuration } = this.options;
+    const handAnimateDuration = this.options.handAnimateDuration ?? 500;
+    const handShakeAnimationDuration =
+      this.options.handShakeAnimationDuration ?? 300;
+
     const element = this.element.querySelector(
       side === "left" ? ".left-hand" : ".right-hand"
     ) as HTMLSpanElement;
@@ -174,7 +176,7 @@ export class NiwiCuteButton {
   }
 
   private async bodyAnimation({ side }: { side: "left" | "right" | "middle" }) {
-    const { bodyAnimationDuration } = this.options;
+    const bodyAnimationDuration = this.options.bodyAnimationDuration ?? 800;
     const element = this.element.querySelector(".center") as HTMLSpanElement;
 
     if (side === "middle" && element && !this.checkIsAnimating(element)) {
