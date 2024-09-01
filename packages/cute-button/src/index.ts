@@ -11,6 +11,9 @@ export type NiwiCuteButtonOptions = Partial<{
   handShakeAnimationDuration: number;
   bodyAnimationDuration: number;
   type: NiwiButttonType;
+  isActive: boolean;
+  // eslint-disable-next-line no-unused-vars
+  onChangeActive: (value: boolean) => void;
 }> & {
   characterType: CharacterType;
 };
@@ -25,6 +28,12 @@ export const defaultOptions = {
 export class NiwiCuteButton {
   private element: HTMLElement;
   private options: NiwiCuteButtonOptions;
+  private currentButton:
+    | NiwiCuteMenuButton
+    | NiwiCuteSettingButton
+    | NiwiCuteNotiButton
+    | NiwiCuteTogglerButton
+    | NiwiCuteHoverButton;
 
   constructor(element: HTMLElement, options?: NiwiCuteButtonOptions) {
     this.element = element;
@@ -32,20 +41,39 @@ export class NiwiCuteButton {
 
     switch (this.options.type) {
       case "menu":
-        new NiwiCuteMenuButton(this.element, this.options.characterType);
+        this.currentButton = new NiwiCuteMenuButton(
+          this.element,
+          this.options.characterType
+        );
         break;
       case "setting":
-        new NiwiCuteSettingButton(this.element, this.options.characterType);
+        this.currentButton = new NiwiCuteSettingButton(
+          this.element,
+          this.options.characterType
+        );
         break;
       case "noti":
-        new NiwiCuteNotiButton(this.element, this.options.characterType);
+        this.currentButton = new NiwiCuteNotiButton(
+          this.element,
+          this.options.characterType
+        );
         break;
       case "toggler":
-        new NiwiCuteTogglerButton(this.element, this.options.characterType);
+        this.currentButton = new NiwiCuteTogglerButton(
+          this.element,
+          this.options
+        );
         break;
       default: {
-        new NiwiCuteHoverButton(this.element, this.options);
+        this.currentButton = new NiwiCuteHoverButton(
+          this.element,
+          this.options
+        );
       }
     }
+  }
+
+  getCurrent() {
+    return this.currentButton;
   }
 }

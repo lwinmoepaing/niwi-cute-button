@@ -1,3 +1,6 @@
+/**
+ * Niwi Cute Button Hover Animation
+ */
 .niwi-cb-animation {
   position: relative;
 
@@ -137,6 +140,9 @@
   }
 }
 
+/**
+ * Niwi Cute Button Menu Animation
+ */
 .niwi-cb-menu-animation {
   .first-bar {
     transition: all 0.3s ease-in-out;
@@ -173,6 +179,9 @@
   }
 }
 
+/**
+ * Niwi Cute Button Setting Animation
+ */
 .niwi-cb-setting-animation {
   &:hover {
     .dot-group {
@@ -212,5 +221,57 @@
   }
   100% {
     transform: translateY(1.5px);
+  }
+}
+
+/**
+ * Niwi Cute Button Notification Animation
+ */
+.niwi-cb-noti-animation {
+  position: relative;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .hand {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    transform-origin: left;
+    transform: translateX(-70%) rotate(-15deg);
+  }
+
+  .noti {
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  &.animated {
+    .noti {
+      transform: rotate(-25deg);
+    }
+  }
+}
+
+/**
+ * Niwi Cute Button Toggler Animation
+ */
+.niwi-cb-toggler-animation {
+  .circle-btn {
+    transition: 0.2s all ease-in-out;
+    filter: grayscale(1);
+  }
+
+  &.active {
+    .circle-btn {
+      filter: grayscale(0);
+      transform: translateX(43%);
+    }
   }
 }
