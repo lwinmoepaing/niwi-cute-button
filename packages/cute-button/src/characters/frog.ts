@@ -74,6 +74,11 @@ const frog: CharacterType = {
 </svg>
 
 `,
+  menu: ``,
+  setting: ``,
+  noti: ``,
+  toggler: ``,
+  hand: ``,
 };
 
 export default frog;

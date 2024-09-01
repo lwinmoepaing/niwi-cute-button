@@ -136,3 +136,81 @@
     }
   }
 }
+
+.niwi-cb-menu-animation {
+  .first-bar {
+    transition: all 0.3s ease-in-out;
+    transform-origin: 23% 39%;
+  }
+
+  .middle-bar {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .last-bar {
+    transition: all 0.3s ease-in-out;
+    transform-origin: 25% 60%;
+  }
+
+  &.animated {
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .first-bar {
+      transform: rotate(45deg);
+      transform-origin: 23% 39%;
+    }
+
+    .middle-bar {
+      opacity: 0;
+    }
+
+    .last-bar {
+      transform: rotate(-45deg);
+      transform-origin: 25% 60%;
+    }
+  }
+}
+
+.niwi-cb-setting-animation {
+  &:hover {
+    .dot-group {
+      .dot:nth-child(1) {
+        animation-duration: 0.6s;
+        animation-name: niwi-cb-setting-menu-animation;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+      .dot:nth-child(2) {
+        animation-duration: 0.6s;
+        animation-delay: 0.12s;
+        animation-name: niwi-cb-setting-menu-animation;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+      .dot:nth-child(3) {
+        animation-duration: 0.6s;
+        animation-delay: 0.22s;
+        animation-name: niwi-cb-setting-menu-animation;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes niwi-cb-setting-menu-animation {
+  0% {
+    transform: translateY(1.5px);
+  }
+  50% {
+    transform: translateY(-1.5px);
+  }
+  100% {
+    transform: translateY(1.5px);
+  }
+}
