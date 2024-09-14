@@ -16,6 +16,7 @@
     
     "add:react": "pnpm add -filter='@niwi-ui/cute-button-react'",
     "remove:react": "pnpm remove -filter='@niwi-ui/cute-button-react'",
+    "test:react": "pnpm test -filter='@niwi-ui/cute-button-react'",
     "dev:react": "turbo dev --filter='@niwi-ui/cute-button-react' --filter='@niwi-ui/react-playground' --filter='@niwi-ui/cute-button-css'",
     "lint:react": "turbo lint --filter='@niwi-ui/cute-button-react'",
     "build:react": "turbo build --filter='@niwi-ui/cute-button-react'",
